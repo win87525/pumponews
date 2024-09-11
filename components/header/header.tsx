@@ -1,10 +1,12 @@
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./header.module.css";
 import Icon from "./headerIcon";
 import HeaderList from "./headerList";
 
-export default function Header() {
+const Header: FC = () => {
+ 
   return (
     <header className={styles.header}>
       <div className={styles.headerIndex}>
@@ -26,9 +28,11 @@ export default function Header() {
 
       <nav className={styles.headerNav}>
         <ul className={styles.headerNavList}>
-          <HeaderList />
+        <HeaderList />
         </ul>
       </nav>
     </header>
   );
 }
+
+export default Header;
